@@ -25,11 +25,14 @@ const Navbar = ({ selectedPage, setSelectedPage, isTopOfPage }: Props) => {
   const flexBetween = "flex items-center justify-between";
   const isAboveMediumScreen = useMediaQuery("(min-width: 1060px)");
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
+  const navbarBackground = isTopOfPage ? "" : "bg-primary-100 drop-shadow";
   return (
     <nav>
       {/* fixed means at top never moves, top-0 means at top,z-30 makes 
       show above other lements, w-full takes full width of screen, py-6 gives padding 6 above and below */}
-      <div className={`${flexBetween} fixed top-0 z-30 w-full py-6`}>
+      <div
+        className={`${navbarBackground} ${flexBetween} fixed top-0 z-30 w-full py-6`}
+      >
         {/* mx-auto centers div in middle, w-5/6 5/6 is percetage of width*/}
         <div className={`${flexBetween} mx-auto w-5/6`}>
           <div className={`${flexBetween} w-full gap-16`}>

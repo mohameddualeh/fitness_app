@@ -20,15 +20,15 @@ const Home = ({ setSelectedPage, selectedPage }: Props) => {
   return (
     <section id="home" className="bg-gray-20 gap-16 py-10 md:h-full md:pb-0">
       {/* Image and main header */}
-      <motion.div 
-      className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6"
-      onViewportEnter={()=>setSelectedPage(SelectedPage.Home)}
+      <motion.div
+        className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6"
+        onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
       >
         {/* main header */}
         <div className="z-10 mt-32 md:basis-3/5">
           {/* headings */}
           <motion.div
-            className="md:-mt-20" 
+            className="md:-mt-20"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}

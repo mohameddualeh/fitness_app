@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { SelectedPage } from "./shared/types";
 import Home from "@/scenes/home";
 import Benefit from "./scenes/benefits";
+import OurClasses from "./scenes/ourClasses/OurClasses";
 
 // Lets you declare a set of collections of related constants as a single type
 // that can be passed in
@@ -44,6 +45,9 @@ function App() {
       
       />
       <Benefit setSelectedPage={setSelectedPage} />
+      <OurClasses 
+      setSelectedPage={setSelectedPage}
+      selectedPage={SelectedPage.OurClasses}/>
     </div>
   );
 }

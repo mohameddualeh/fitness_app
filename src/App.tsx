@@ -41,6 +41,7 @@ function App() {
       <Home
         setSelectedPage={setSelectedPage}
         selectedPage={SelectedPage.Home}
+      
       />
       <Benefit setSelectedPage={setSelectedPage} />
     </div>

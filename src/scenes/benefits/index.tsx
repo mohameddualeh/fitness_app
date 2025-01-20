@@ -1,8 +1,12 @@
 import HText from "@/shared/HText";
 import { BenefitsType, SelectedPage } from "@/shared/types";
-import { HomeModernIcon } from "@heroicons/react/16/solid";
+import {
+  HomeModernIcon,
+  UserGroupIcon,
+  AcademicCapIcon,
+} from "@heroicons/react/16/solid";
 import { motion } from "framer-motion";
-import Benefit from "./benefit";
+import Benefit from "@/scenes/benefits";
 
 const benefits: Array<BenefitsType> = [
   {

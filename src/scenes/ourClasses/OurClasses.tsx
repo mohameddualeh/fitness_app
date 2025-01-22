@@ -1,4 +1,4 @@
-import { SelectedPage } from "@/shared/types";
+import { ClassType, SelectedPage } from "@/shared/types";
 import image1 from "@/assets/image1.png";
 import image2 from "@/assets/image2.png";
 import image3 from "@/assets/image3.png";
@@ -8,6 +8,41 @@ import image6 from "@/assets/image6.png";
 import { section } from "framer-motion/client";
 import { motion } from "framer-motion";
 import HText from "@/shared/HText";
+
+const classes: Array<ClassType> = [
+  {
+    name: "Weight Training Classes",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo accusamus nesciunt nihil repellat.",
+    image: image1,
+  },
+  {
+    name: "Yoga Training Classes",
+    image: image2,
+  },
+  {
+    name: "Abs Training Classes",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo accusamus nesciunt nihil repellat.",
+    image: image3,
+  },
+  {
+    name: "Adventure Training Classes",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo accusamus nesciunt nihil repellat.",
+    image: image4,
+  },
+  {
+    name: "Training Training Classes",
+    image: image5,
+  },
+  {
+    name: "Weight Training Classes",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo accusamus nesciunt nihil repellat.",
+    image: image6,
+  },
+];
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -28,7 +63,7 @@ const OurClasses = ({ setSelectedPage }: Props) => {
           variants={{
             hidden: { opacity: 0, x: -50 },
             visible: { opacity: 1, x: 0 },
-          }}
+          }} 
         >
           <div className="md:w-3/5">
             <HText>OUR CLASSES</HText>
@@ -40,6 +75,18 @@ const OurClasses = ({ setSelectedPage }: Props) => {
             </p>
           </div>
         </motion.div>
+        {/* <div className="mt-10 h-[353px] w-full overflow-x-auto overflow-y-hidden">
+          <ul className="w-[2800px] whitespace-nowrap">
+            {classes.map((item: ClassType, index) => (
+              <Class
+                key={`${item.name}-${index}`}
+                name={item.name}
+                description={item.description}
+                image={item.image}
+              />
+            ))}
+          </ul>
+        </div> */}
       </motion.div>
     </section>
   );
